@@ -1,0 +1,66 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+
+<head>
+    <style>
+        #arttir {
+            background-color: green;
+            color: white;
+            width: 35px;
+            height: 30px;
+            border: none;
+            font-size: 25px;
+        }
+
+        #azalt {
+            background-color: darkred;
+            color: white;
+            width: 35px;
+            height: 30px;
+            border: none;
+            font-size: 25px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <br />
+    <br />
+
+    <input id="text" type="text" name="name" value="0" />
+
+    <button onclick="artirma()" id="arttir">+</button>
+
+    <button onclick="azaltma()" id="azalt">-</button>
+
+</body>
+<script>
+    function artirma() {
+        var a = document.getElementById("text").value;
+        a = Number(a);
+        a += 1;
+        document.getElementById("text").value = a;
+    }
+
+    function azaltma() {
+        var a = document.getElementById("text").value;
+        a = Number(a);
+        if (a==0) {
+            a=0
+        }
+        else {
+            a -= 1;
+        }
+        
+        document.getElementById("text").value = a;
+    }
+
+</script>
+

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <style>
+       
+    </style>
+
+
+</head>
+
+<body id="arka">
+    <br />
+    <br />
+    <img src="~/Resim/Resim1.jpg" id="img" @*width="1300" height="600"*@/>
+    
+</body>
+<script>
+    var text;
+    function resimSec() {
+        var a = ["/Resim/Resim1.jpg", "/Resim/Resim2.jpg", "/Resim/Resim3.jpg", "/Resim/Resim4.jpg", "/Resim/Resim5.jpg"];
+
+        text = "";
+        var random = Math.round(Math.random() * 4);
+        text = a[random];
+    }
+    setInterval(function () {
+        resimSec();
+        document.getElementById("img").src = text;
+    }, 2000);
+
+    function renkYarat() {
+        var a = "ABCDEF0123456789";
+        text = "#";
+        for (var i = 0; i < 6; i++) {
+            var random = Math.round(Math.random() * 15);
+            text += a.charAt(random);
+        }
+    }
+    setInterval(function () {
+        renkYarat();
+        document.getElementById("arka").style.backgroundColor = text;
+    }, 2000);
+        
+</script>
